@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Ghany Rahmat Sa'adi</title>
+  <meta name="description" content="Portfolio pribadi Ghany Rahmat Sa'adi — mahasiswa Universitas Pamulang, hobi bermain game dan Fotografi." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --bg:#12161d; --card:#1a1f27; --accent:#4f46e5; --muted:#9aa4b2; --glass: rgba(255,255,255,0.03);
+      --max-w:1100px;
+      --radius:14px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg); color:#e6eef8; -webkit-font-smoothing:antialiased}
+    .container{max-width:var(--max-w); margin:48px auto; padding:24px}
+    header{display:flex;gap:24px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:20px;flex:0 0 120px;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .nav{margin-left:auto;display:flex;gap:12px}
+    .btn{background:var(--glass);border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;font-weight:600;transition:.25s}
+    .btn:hover{background:rgba(255,255,255,0.06)}
+    main{margin-top:28px;display:grid;grid-template-columns:1fr 340px;gap:24px}
+    .card{background:var(--card); padding:18px; border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.02)}
+    .about h2,.projects h2,.contact h2,.gallery h2{margin-top:0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.04);font-size:13px}
+    .projects-list{display:grid;gap:14px}
+    .project{display:flex;gap:12px;align-items:center;transition:.25s}
+    .project:hover{background:rgba(255,255,255,0.04);border-radius:12px;padding:8px}
+    .project .thumb{width:84px;height:64px;border-radius:10px;background:#0f172a;display:flex;align-items:center;justify-content:center;font-weight:600}
+    .project h3{margin:0;font-size:15px}
+    .project p{margin:4px 0 0;color:var(--muted);font-size:13px}
+    aside .card + .card{margin-top:16px}
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:900px){main{grid-template-columns:1fr} .nav{display:none} .avatar{width:96px;height:96px}}
+    .fade{opacity:0;transform:translateY(8px);animation:fadeIn .6s forwards}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+    .cta{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--accent);color:white;text-decoration:none;font-weight:700;transition:.25s}
+    .cta:hover{background:#3730a3}
+    .project .meta{font-size:12px;color:var(--muted);margin-top:6px}
+    .contact form{display:grid;gap:10px}
+    input,textarea{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:inherit}
+    input::placeholder,textarea::placeholder{color:rgba(230,238,248,0.5)}
+    .small{font-size:13px;color:var(--muted)}
+    .resume{display:inline-block;margin-top:12px}
+    /* Galeri Fotografi */
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:12px}
+    .gallery-grid img{width:100%;border-radius:10px;object-fit:cover;box-shadow:0 2px 6px rgba(0,0,0,0.4);transition:.3s}
+    .gallery-grid img:hover{transform:scale(1.03)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="fade">
+      <div class="avatar">
+        <img src="diri.jpg" alt="Foto Ghany Rahmat Sa'adi">
+      </div>
+      <div>
+        <h1 id="name">Ghany Rahmat Sa'adi</h1>
+        <p class="lead" id="tagline">Mahasiswa • Hobi Bermain Game, Memasak & Fotografi</p>
+        <p class="small">Universitas: <strong id="university">Universitas Pamulang</strong> • 
+          Email: <a href="mailto:ghany4321@gmail.com" id="email">ghany4321@gmail.com</a></p>
+        <div class="resume">
+          <a href="#contact" class="cta">Hubungi Saya</a>
+          <a class="btn" href="#projects">Lihat Proyek</a>
+          <a class="btn" href="#photography">Fotografi</a>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="#about">Tentang</a>
+        <a class="btn" href="#projects">Proyek</a>
+        <a class="btn" href="#photography">Fotografi</a>
+        <a class="btn" href="#contact">Kontak</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="card about fade" id="about">
+          <h2 id="about-title">Tentang Saya</h2>
+          <p id="about">Halo, saya Ghany Rahmat Sa'adi, seorang mahasiswa Universitas Pamulang. Saya memiliki hobi bermain game dan minat di bidang teknologi, data, serta fotografi. Saya juga aktif mengerjakan proyek kecil untuk melatih keterampilan.</p>
+          <div class="skills" id="skills">
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">Analisis Data</div>
+          </div>
+        </div>
+
+        <div class="card projects fade" id="projects">
+          <h2>Proyek Akademik</h2>
+          <div class="projects-list">
+            <article class="project">
+              <div class="thumb">P1</div>
+              <div>
+                <h3>Analisis Data Kelulusan</h3>
+                <p>Proyek analisis data dengan algoritma Decision Tree dan Naive Bayes.</p>
+                <div class="meta">Stack: Python, scikit-learn • </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">P2</div>
+              <div>
+                <h3>Analisis Data Korupsi</h3>
+                <p>Proyek analisis data dengan algoritma K-Means.</p>
+                <div class="meta">Stack: Python • </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Bagian Fotografi -->
+        <div class="card gallery fade" id="photography">
+          <h2>Fotografi</h2>
+          <p class="small">Beberapa hasil jepretan saya.</p>
+          <div class="gallery-grid">
+            <img src="jepret1.jpg" alt="Foto 1">
+            <img src="jepret2.jpg" alt="Foto 2">
+            <img src="jepret3.jpg" alt="Foto 3">
+          </div>
+        </div>
+
+        <div class="card fade">
+          <h2>Pengalaman Organisasi</h2>
+          <ul class="small">
+            <li>2017 — Ketua Rohani Islam SMPN 11 Tangerang</li>
+            <li>2018 — Anggota Ikatan Remaja Masjid Nurul Hikmah</li>
+            <li>2021 — Sekbid Kesehatan SMK Yadika 4 (OSIS)</li>
+            <li>2023 — Anggota Kepanitiaan Yayasan Baiturrohim</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card contact fade" id="contact">
+          <h2>Kontak</h2>
+          <p class="small">Silakan hubungi saya melalui form berikut atau email langsung.</p>
+          <form onsubmit="sendMail(event)">
+            <input type="text" id="cname" placeholder="Nama" required />
+            <input type="email" id="cemail" placeholder="Email" required />
+            <textarea id="cmessage" rows="4" placeholder="Pesan" required></textarea>
+            <button class="cta" type="submit">Kirim Pesan</button>
+          </form>
+        </div>
+
+        <div class="card fade">
+          <h3>Info Singkat</h3>
+          <p class="small">Status: Mahasiswa Aktif</p>
+          <p class="small">Bidang: Teknologi & Pemrograman</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Ghany Rahmat Sa'adi Dibuat dengan ❤️.</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function sendMail(e){
+      e.preventDefault();
+      const name = document.getElementById('cname').value;
+      const email = document.getElementById('cemail').value;
+      const msg = document.getElementById('cmessage').value;
+      const subject = encodeURIComponent('Pesan dari ' + name);
+      const body = encodeURIComponent('Nama: '+name+'%0D%0AEmail: '+email+'%0D%0APesan: '+msg);
+      window.location.href = 'mailto:ghany4321@gmail.com?subject='+subject+'&body='+body;
+    }
+  </script>
+</body>
+</html>
